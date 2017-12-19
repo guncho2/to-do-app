@@ -77,7 +77,7 @@ function onReady() {
   //forEach() takes a function as a parameter and executes that
   // function for each item in the array. Using forEach is how
   // we'll render each to-do as an li in the to-do list  ul.
-  renderTheUI({
+  function renderTheUI(){
     const toDoList = document.getElementById(toDoList);
     const deleteToDoform = document.getElementById(deleteToDoform);
     const newLi = document.createElement('deleteToDoform');
