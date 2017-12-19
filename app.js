@@ -22,7 +22,7 @@ function onReady() {
   //each to-do object to be Each to-do will be an object in the
   // toDos array, and each toDo object will have two properties:
   // title and complete.
-  function createNewToDo{
+  function createNewToDo(){
     //We now have a functional to-do app, but it allows the user to
     // submit empty to-do items, which is potentially confusing.
     //Let's prevent that by executing a return if the value for
