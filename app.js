@@ -11,9 +11,9 @@ function onReady() {
     todos = todos.filter(todo => todo.id !== id);
   }
 
-  const addToDoForm = document.getElementById(addToDoForm);
+  const addToDoForm = document.getElementById("addToDoForm");
   //input ID
-  const newToDoText = document.getElementById(newToDoText);
+  const newToDoText = document.getElementById("newToDoText");
   //Add createNewToDo() Function
   //will update our array of to-dos. We'll call createNewToDo()
   //with an event listener on our form.
@@ -44,7 +44,7 @@ function onReady() {
     renderTheUI();
   }
   //ul ID
-  const toDoList = document.getElementById(toDoList);
+  const toDoList = document.getElementById("toDoList");
 
 
 
@@ -78,9 +78,9 @@ function onReady() {
   // function for each item in the array. Using forEach is how
   // we'll render each to-do as an li in the to-do list  ul.
   function renderTheUI(){
-    const toDoList = document.getElementById(toDoList);
-    const deleteToDoform = document.getElementById(deleteToDoform);
-    const newLi = document.createElement('deleteToDoform');
+
+
+
 
 
     //before the forEach() function, we
@@ -89,6 +89,7 @@ function onReady() {
     //each time we call the renderTheUI() function, it will add
     //new lis to the ul.
     toDos.forEach(function (toDo) {
+      const newLi = document.createElement('li');
       const deleteBtn = document.createElement('button');
       deleteBtn.textContent = "Delete";
 
@@ -97,11 +98,11 @@ function onReady() {
         //update view
         deleteToDo(toDo.id);
         renderTheUI();
-      }
+      });
 
       let title = newToDoText.value;
       //Create a new li element for the to-do.
-      const newLi = document.createElement('li');
+
       //Create an input element that has a type attribute of checkbox.
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
@@ -114,13 +115,13 @@ function onReady() {
       title.textContent = toDo.title;
       // let's update the DOM
 
-      toDoList.appendChild(newLi);
+
       newLi.appendChild(checkbox);
       newLi.appendChild(deleteBtn);
-
+      toDoList.appendChild(newLi);
 
     })
-  })
+  }
 
 
 
