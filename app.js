@@ -100,7 +100,7 @@ function onReady() {
         renderTheUI();
       });
 
-      let title = newToDoText.value;
+      // let title = newToDoText.value;
       //Create a new li element for the to-do.
 
       //Create an input element that has a type attribute of checkbox.
@@ -111,7 +111,7 @@ function onReady() {
       //the to-do.
       //Append the span and input to the li.
       newLi.textContent = title;
-      const title = document.createElement('span');
+      let title = document.createElement('span');
       title.textContent = toDo.title;
       // let's update the DOM
 
